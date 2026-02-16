@@ -1,0 +1,108 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Услуги | Автомастерская У попи</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="body-bg"></div>
+
+  <header class="nav">
+    <div class="logo">У попи</div>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="work.html" class="active">Услуги</a>
+      <a href="about.html">О мастерской</a>
+      <a href="testimonials.html">Отзывы</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="section" style="padding-top: 110px;">
+    <div class="panel reveal in-view">
+      <h2>Услуги и кейсы</h2>
+      <p>Формат работы построен как у современных международных сервисов: точная диагностика, согласование сметы и прозрачный отчет после ремонта.</p>
+
+      <div class="car-stage" id="car-stage">
+        <div class="car-ui">
+          <div class="car-hint">Демонстрация бокса</div>
+          <div class="speed-badge">Скорость: <span id="car-speed">42</span> км/ч</div>
+          <button type="button" class="btn btn-ghost" id="car-turbo-btn">Включить турбо</button>
+          <button type="button" class="btn btn-ghost" id="car-night-btn">Ночной режим</button>
+        </div>
+
+        <div class="garage-grid"></div>
+        <div class="lift-post left" aria-hidden="true"></div>
+        <div class="lift-post right" aria-hidden="true"></div>
+        <div class="road"></div>
+
+        <div class="car-mascot" aria-hidden="true">
+          <div class="car-shadow"></div>
+          <div class="headlight-beam"></div>
+          <div class="car-body">
+            <div class="car-roof">
+              <div class="car-window"></div>
+            </div>
+            <div class="car-mirror"></div>
+            <div class="car-door-line"></div>
+            <div class="car-grille"></div>
+            <div class="car-light"></div>
+            <div class="car-light rear"></div>
+            <div class="car-spoiler"></div>
+            <div class="car-underglow"></div>
+          </div>
+          <div class="exhaust">
+            <span class="smoke s1"></span>
+            <span class="smoke s2"></span>
+            <span class="smoke s3"></span>
+            <span class="smoke s4"></span>
+            <span class="smoke s5"></span>
+          </div>
+          <div class="sparks">
+            <span class="spark a"></span>
+            <span class="spark b"></span>
+            <span class="spark c"></span>
+            <span class="spark d"></span>
+          </div>
+          <div class="wheel left"></div>
+          <div class="wheel right"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel reveal" style="margin-top: 18px;">
+      <div class="grid">
+        <article class="card work-item">
+          <a href="project-1.html">
+            <figure class="thumb"></figure>
+            <h3>Точная диагностика</h3>
+            <p>Диагностируем электронику, ошибки ECU и скрытые механические проблемы.</p>
+          </a>
+        </article>
+        <article class="card work-item">
+          <a href="project-2.html">
+            <figure class="thumb"></figure>
+            <h3>Ходовая и тормоза</h3>
+            <p>Проверка амортизаторов, рычагов, стоек, тормозной системы и рулевого.</p>
+          </a>
+        </article>
+        <article class="card work-item">
+          <a href="project-3.html">
+            <figure class="thumb"></figure>
+            <h3>Ремонт двигателя</h3>
+            <p>От замены прокладок до сложного восстановления и настройки мотора.</p>
+          </a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">© Автомастерская «У попи», г. Владивосток, ул. Луговая, д. 74</footer>
+  <script src="script.js"></script>
+</body>
+</html>
