@@ -802,6 +802,10 @@ body.theme-dark .car-stage {
   animation: beat-glow 700ms ease-in-out infinite;
 }
 
+.car-song-active .car-svg-body {
+  filter: brightness(1.05) saturate(1.08);
+}
+
 .car-shadow {
   position: absolute;
   left: 18px;
@@ -825,6 +829,63 @@ body.theme-dark .car-stage {
   filter: blur(1px);
   opacity: 0.7;
   animation: beam-flicker 1.6s linear infinite;
+}
+
+.car-svg {
+  display: block;
+  width: 198px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(9, 14, 22, 0.26));
+}
+
+.car-svg-body {
+  fill: url(#carPaint);
+  stroke: #7f2a00;
+  stroke-width: 3;
+}
+
+.car-svg-side {
+  fill: rgba(255, 255, 255, 0.14);
+}
+
+.car-svg-window {
+  fill: url(#carGlass);
+  stroke: rgba(56, 86, 112, 0.45);
+  stroke-width: 2;
+}
+
+.car-svg-window-small {
+  opacity: 0.85;
+}
+
+.car-svg-light-front {
+  fill: #ffe394;
+  filter: drop-shadow(0 0 5px rgba(255, 228, 148, 0.9));
+}
+
+.car-svg-light-rear {
+  fill: #ff6655;
+  filter: drop-shadow(0 0 4px rgba(255, 102, 85, 0.8));
+  animation: rear-blink 1.4s ease-in-out infinite;
+}
+
+.car-svg-wheel-base {
+  fill: #1e232b;
+}
+
+.car-svg-wheel {
+  fill: #b7c5d5;
+  stroke: #5c6c7d;
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: wheel-spin 0.5s linear infinite;
+}
+
+.car-svg-handle {
+  stroke: rgba(255, 228, 192, 0.9);
+  stroke-width: 3;
+  stroke-linecap: round;
 }
 
 .car-body {
@@ -1030,8 +1091,8 @@ body.theme-dark .car-stage {
 
 .exhaust {
   position: absolute;
-  left: 8px;
-  top: 49px;
+  left: 14px;
+  top: 54px;
   width: 26px;
   height: 22px;
 }
@@ -1161,6 +1222,10 @@ body.theme-dark .car-stage {
 }
 
 .car-stage.turbo .wheel {
+  animation-duration: 0.2s;
+}
+
+.car-stage.turbo .car-svg-wheel {
   animation-duration: 0.2s;
 }
 

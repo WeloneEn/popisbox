@@ -31,7 +31,7 @@
 
   <main class="section" style="padding-top: 110px;">
     <div class="panel reveal in-view">
-      <h2>Услуги и кейсы</h2>
+      <h2>Услуги и запись</h2>
       <p>Формат работы как у современных международных сервисов: входная диагностика, согласование сметы, ремонт и финальный контроль.</p>
 
       <div class="car-stage" id="car-stage">
@@ -50,27 +50,32 @@
         <div class="car-mascot" id="car-mascot" role="button" tabindex="0" aria-label="Машина. Нажмите, чтобы включить песню Rock You Like a Hurricane.">
           <div class="car-shadow"></div>
           <div class="headlight-beam"></div>
-          <div class="car-body">
-            <div class="car-hood-line"></div>
-            <div class="car-wheel-arch front"></div>
-            <div class="car-wheel-arch rear"></div>
-            <div class="car-roof">
-              <div class="car-roof-antenna"></div>
-              <div class="car-window rear"></div>
-              <div class="car-pillar"></div>
-              <div class="car-window front"></div>
-            </div>
-            <div class="car-mirror"></div>
-            <div class="car-door-line"></div>
-            <div class="car-hatch-line"></div>
-            <div class="car-handle"></div>
-            <div class="car-emblem"></div>
-            <div class="car-grille"></div>
-            <div class="car-light"></div>
-            <div class="car-light rear"></div>
-            <div class="car-bumper-lip"></div>
-            <div class="car-underglow"></div>
-          </div>
+          <svg class="car-svg" viewBox="0 0 420 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="carPaint" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#ff8d3f" />
+                <stop offset="58%" stop-color="#ea6922" />
+                <stop offset="100%" stop-color="#c14309" />
+              </linearGradient>
+              <linearGradient id="carGlass" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#dff2ff" />
+                <stop offset="100%" stop-color="#8fb8da" />
+              </linearGradient>
+            </defs>
+            <path class="car-svg-body" d="M34 108C39 85 52 74 75 67L136 49C170 39 230 38 264 48L304 58C323 63 340 77 350 95L375 100C385 103 392 111 392 121V126C392 135 385 142 376 142H40C27 142 18 132 20 118C21 112 27 108 34 108Z" />
+            <path class="car-svg-side" d="M62 104L93 72C103 62 118 56 133 56H252C270 56 287 62 300 74L327 102Z" />
+            <path class="car-svg-window" d="M104 97L126 73C131 67 139 64 147 64H184V97Z" />
+            <path class="car-svg-window" d="M192 64H246C258 64 269 68 277 77L295 97H192Z" />
+            <path class="car-svg-window car-svg-window-small" d="M74 96L90 79C95 74 102 71 109 70L119 70L101 97Z" />
+            <rect class="car-svg-light car-svg-light-front" x="370" y="108" width="14" height="13" rx="3" />
+            <rect class="car-svg-light car-svg-light-rear" x="26" y="105" width="10" height="16" rx="3" />
+            <circle class="car-svg-wheel-base" cx="118" cy="140" r="26" />
+            <circle class="car-svg-wheel-base" cx="309" cy="140" r="26" />
+            <circle class="car-svg-wheel car-svg-wheel-rear" cx="118" cy="140" r="16" />
+            <circle class="car-svg-wheel car-svg-wheel-front" cx="309" cy="140" r="16" />
+            <path class="car-svg-handle" d="M210 95h20" />
+            <path class="car-svg-handle" d="M160 94h18" />
+          </svg>
           <div class="exhaust">
             <span class="smoke s1"></span>
             <span class="smoke s2"></span>
@@ -84,8 +89,6 @@
             <span class="spark c"></span>
             <span class="spark d"></span>
           </div>
-          <div class="wheel left"></div>
-          <div class="wheel right"></div>
         </div>
       </div>
       <audio id="car-song" preload="none">
@@ -141,28 +144,19 @@
     </div>
 
     <div class="panel reveal" style="margin-top: 18px;">
-      <h2>Кейсы</h2>
+      <h2>Как проходит работа</h2>
       <div class="grid">
-        <article class="card work-item">
-          <a href="project-1.html">
-            <figure class="thumb"></figure>
-            <h3>Точная диагностика</h3>
-            <p>Электроника, ошибки ECU и скрытые механические проблемы.</p>
-          </a>
+        <article class="card">
+          <h3>1. Приём и диагностика</h3>
+          <p>Фиксируем жалобы, выполняем проверку и согласовываем план работ.</p>
         </article>
-        <article class="card work-item">
-          <a href="project-2.html">
-            <figure class="thumb"></figure>
-            <h3>Ходовая и тормоза</h3>
-            <p>Амортизаторы, рычаги, стойки, рулевое и тормоза.</p>
-          </a>
+        <article class="card">
+          <h3>2. Ремонт</h3>
+          <p>Выполняем работы по регламенту, уведомляем о ходе и статусе.</p>
         </article>
-        <article class="card work-item">
-          <a href="project-3.html">
-            <figure class="thumb"></figure>
-            <h3>Ремонт двигателя</h3>
-            <p>От замены прокладок до сложного восстановления мотора.</p>
-          </a>
+        <article class="card">
+          <h3>3. Контроль и выдача</h3>
+          <p>Контрольный тест, рекомендации по обслуживанию и гарантия.</p>
         </article>
       </div>
     </div>

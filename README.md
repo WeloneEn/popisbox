@@ -12,11 +12,11 @@
 ## Страницы
 
 - `index.html` — главная и ключевые преимущества
-- `work.html` — услуги, кейсы и анимация машины
+- `work.html` — услуги, цены и анимация машины
 - `about.html` — подход и принципы мастерской
 - `testimonials.html` — отзывы клиентов
 - `contact.html` — контакты и запись
-- `project-1.html`, `project-2.html`, `project-3.html` — подробные кейсы
+- `project-1.html`, `project-2.html`, `project-3.html` — архивные служебные страницы
 
 ## Локальный запуск
 
