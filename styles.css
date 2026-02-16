@@ -211,6 +211,7 @@ a {
   padding: 0 18px;
   font-size: 15px;
   font-weight: 700;
+  cursor: pointer;
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
@@ -303,6 +304,210 @@ a {
 
 .card p {
   margin-bottom: 0;
+}
+
+.kpi-strip {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.kpi-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 12px;
+}
+
+.kpi-item strong {
+  display: block;
+  font-family: "Rajdhani", "Segoe UI", sans-serif;
+  font-size: 28px;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.kpi-item span {
+  display: block;
+  margin-top: 5px;
+  color: var(--text-soft);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.booking-form {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 14px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field-full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 11px;
+  font: inherit;
+  font-size: 14px;
+}
+
+.field textarea {
+  min-height: 94px;
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  outline-offset: 1px;
+}
+
+.form-note {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.badge-chip {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-soft);
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.price-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  padding: 14px;
+}
+
+.price-card h3 {
+  margin-bottom: 6px;
+}
+
+.price-row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+.price-row strong {
+  color: var(--accent-2);
+}
+
+.cta-band {
+  margin-top: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(140deg, color-mix(in srgb, var(--accent) 8%, var(--surface)), var(--surface-2));
+  padding: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cta-band p {
+  margin: 0;
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.hours-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 11px;
+}
+
+.hours-item strong {
+  display: block;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.hours-item span {
+  display: block;
+  margin-top: 4px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.check-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-soft);
+}
+
+.check-list li {
+  margin-bottom: 6px;
+}
+
+.map-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.tiny {
+  font-size: 12px;
+  color: var(--text-soft);
 }
 
 .work-item a {
@@ -574,18 +779,34 @@ body.theme-dark .car-stage {
   position: absolute;
   bottom: 72px;
   left: -200px;
-  width: 180px;
-  height: 92px;
+  width: 198px;
+  height: 96px;
   animation: car-drive 11s linear infinite;
   will-change: transform;
   z-index: 4;
+  cursor: pointer;
+  outline: none;
+}
+
+.car-mascot:focus-visible {
+  filter: drop-shadow(0 0 0.6rem rgba(255, 200, 130, 0.8));
+}
+
+.car-stage .btn {
+  position: relative;
+  z-index: 7;
+}
+
+.car-song-active .car-underglow {
+  background: rgba(255, 205, 132, 0.9);
+  animation: beat-glow 700ms ease-in-out infinite;
 }
 
 .car-shadow {
   position: absolute;
-  left: 20px;
+  left: 18px;
   bottom: -9px;
-  width: 138px;
+  width: 154px;
   height: 22px;
   background: rgba(0, 0, 0, 0.4);
   filter: blur(10px);
@@ -596,7 +817,7 @@ body.theme-dark .car-stage {
 .headlight-beam {
   position: absolute;
   right: -118px;
-  top: 26px;
+  top: 34px;
   width: 142px;
   height: 34px;
   background: linear-gradient(90deg, rgba(255, 228, 149, 0.6), rgba(255, 228, 149, 0));
@@ -608,41 +829,100 @@ body.theme-dark .car-stage {
 
 .car-body {
   position: absolute;
-  left: 16px;
-  top: 18px;
-  width: 150px;
-  height: 46px;
-  border-radius: 16px 18px 10px 12px;
-  background: linear-gradient(135deg, #ff8b3f, #cf5210);
+  left: 12px;
+  top: 22px;
+  width: 172px;
+  height: 44px;
+  border-radius: 18px 30px 12px 14px;
+  clip-path: polygon(0 68%, 8% 44%, 22% 36%, 42% 34%, 60% 35%, 77% 40%, 91% 52%, 100% 66%, 100% 96%, 0 96%);
+  background: linear-gradient(126deg, #ff8e42 0%, #ef6c20 46%, #c64609 100%);
   border: 2px solid #992f00;
   animation: suspension-bounce 0.9s ease-in-out infinite;
+}
+
+.car-hood-line {
+  position: absolute;
+  left: 98px;
+  top: 9px;
+  width: 48px;
+  height: 2px;
+  background: rgba(84, 33, 9, 0.45);
+}
+
+.car-wheel-arch {
+  position: absolute;
+  bottom: -1px;
+  width: 40px;
+  height: 18px;
+  border-radius: 22px 22px 0 0;
+  border-top: 2px solid rgba(73, 28, 8, 0.72);
+}
+
+.car-wheel-arch.front {
+  right: 20px;
+}
+
+.car-wheel-arch.rear {
+  left: 26px;
 }
 
 .car-roof {
   position: absolute;
   left: 46px;
-  top: -18px;
-  width: 74px;
-  height: 30px;
-  border-radius: 20px 20px 8px 8px;
-  background: linear-gradient(135deg, #ffaa67, #dc6724);
+  top: -24px;
+  width: 92px;
+  height: 32px;
+  border-radius: 26px 24px 8px 8px;
+  clip-path: polygon(0 88%, 6% 48%, 22% 18%, 54% 8%, 78% 16%, 94% 34%, 100% 84%, 100% 100%, 0 100%);
+  background: linear-gradient(135deg, #ffac66, #dd6520);
   border: 2px solid #9f3605;
+}
+
+.car-roof-antenna {
+  position: absolute;
+  right: 14px;
+  top: -7px;
+  width: 2px;
+  height: 8px;
+  background: #1d2a3a;
+  transform: rotate(22deg);
 }
 
 .car-window {
   position: absolute;
-  left: 10px;
-  top: 5px;
-  width: 52px;
+  top: 6px;
   height: 16px;
-  border-radius: 8px;
   background: linear-gradient(135deg, #d8ecff, #9dc8ed);
+  border: 1px solid rgba(66, 97, 126, 0.45);
+}
+
+.car-window.rear {
+  left: 8px;
+  width: 24px;
+  border-radius: 9px 4px 9px 3px;
+  clip-path: polygon(0 8%, 74% 8%, 100% 72%, 0 92%);
+}
+
+.car-window.front {
+  right: 8px;
+  width: 42px;
+  border-radius: 7px 9px 6px 7px;
+  clip-path: polygon(0 4%, 100% 2%, 90% 96%, 0 96%);
+}
+
+.car-pillar {
+  position: absolute;
+  left: 38px;
+  top: 4px;
+  width: 2px;
+  height: 22px;
+  background: rgba(90, 46, 20, 0.65);
 }
 
 .car-mirror {
   position: absolute;
-  right: 30px;
-  top: 9px;
+  right: 44px;
+  top: 7px;
   width: 10px;
   height: 6px;
   border-radius: 5px;
@@ -651,19 +931,49 @@ body.theme-dark .car-stage {
 
 .car-door-line {
   position: absolute;
-  left: 72px;
-  top: 8px;
+  left: 74px;
+  top: 10px;
   width: 2px;
-  height: 30px;
+  height: 25px;
   background: rgba(58, 24, 6, 0.6);
+}
+
+.car-hatch-line {
+  position: absolute;
+  left: 24px;
+  top: 7px;
+  width: 2px;
+  height: 28px;
+  background: rgba(58, 24, 6, 0.48);
+}
+
+.car-handle {
+  position: absolute;
+  left: 82px;
+  top: 20px;
+  width: 12px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(248, 211, 172, 0.9);
+}
+
+.car-emblem {
+  position: absolute;
+  left: 100px;
+  top: 18px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 224, 181, 0.8);
+  box-shadow: 0 0 6px rgba(255, 215, 160, 0.5);
 }
 
 .car-grille {
   position: absolute;
-  right: 2px;
-  bottom: 8px;
-  width: 18px;
-  height: 14px;
+  right: 4px;
+  bottom: 9px;
+  width: 16px;
+  height: 12px;
   border-radius: 5px;
   background: repeating-linear-gradient(
     0deg,
@@ -675,36 +985,42 @@ body.theme-dark .car-stage {
 .car-light {
   position: absolute;
   right: -6px;
-  top: 19px;
-  width: 11px;
-  height: 8px;
-  border-radius: 3px;
+  top: 17px;
+  width: 14px;
+  height: 10px;
+  border-radius: 3px 8px 8px 3px;
   background: #ffe08a;
   box-shadow: 0 0 12px rgba(255, 230, 130, 0.95);
+  clip-path: polygon(0 20%, 78% 0, 100% 45%, 100% 100%, 0 86%);
 }
 
 .car-light.rear {
-  left: -6px;
+  left: -3px;
   right: auto;
+  top: 15px;
+  width: 9px;
+  height: 14px;
+  border-radius: 4px 2px 2px 4px;
   background: #ff6753;
   box-shadow: 0 0 12px rgba(255, 83, 83, 0.75);
+  clip-path: polygon(0 0, 100% 12%, 100% 88%, 0 100%);
   animation: rear-blink 1.4s ease-in-out infinite;
 }
 
-.car-spoiler {
+.car-bumper-lip {
   position: absolute;
-  left: -2px;
-  top: -5px;
-  width: 24px;
+  right: 3px;
+  bottom: 5px;
+  width: 26px;
   height: 6px;
-  border-radius: 6px;
-  background: #2d3848;
+  border-radius: 5px;
+  background: rgba(37, 51, 70, 0.75);
 }
 
 .car-underglow {
   position: absolute;
-  left: 24px;
-  right: 16px;
+  left: 30px;
+  right: 22px;
   bottom: -4px;
   height: 8px;
   border-radius: 50%;
@@ -714,8 +1030,8 @@ body.theme-dark .car-stage {
 
 .exhaust {
   position: absolute;
-  left: 10px;
-  top: 46px;
+  left: 8px;
+  top: 49px;
   width: 26px;
   height: 22px;
 }
@@ -753,7 +1069,7 @@ body.theme-dark .car-stage {
 
 .sparks {
   position: absolute;
-  left: 132px;
+  left: 150px;
   bottom: -2px;
   width: 36px;
   height: 24px;
@@ -824,11 +1140,11 @@ body.theme-dark .car-stage {
 }
 
 .wheel.left {
-  left: 34px;
+  left: 40px;
 }
 
 .wheel.right {
-  right: 24px;
+  right: 22px;
 }
 
 .car-stage.turbo .car-mascot {
@@ -1028,6 +1344,18 @@ body.theme-dark .speed-badge {
   }
 }
 
+@keyframes beat-glow {
+  0%,
+  100% {
+    opacity: 0.65;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1.08);
+  }
+}
+
 @media (max-width: 980px) {
   .hero {
     grid-template-columns: 1fr;
@@ -1035,17 +1363,24 @@ body.theme-dark .speed-badge {
   }
 
   .grid,
-  .case-grid {
+  .case-grid,
+  .kpi-strip,
+  .price-grid,
+  .hours-grid {
     grid-template-columns: 1fr;
   }
 
   .car-mascot {
-    width: 156px;
+    width: 172px;
     transform-origin: center;
   }
 
   .speed-badge {
     display: none;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1185,5 +1520,15 @@ body.theme-dark .speed-badge {
 
   .car-stage {
     min-height: 250px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
   }
 }

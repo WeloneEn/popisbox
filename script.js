@@ -163,6 +163,39 @@
 
   buildQuickContactDock();
 
+  const bookingForms = Array.from(document.querySelectorAll("[data-booking-form]"));
+  const encode = (value) => encodeURIComponent((value || "").trim());
+  bookingForms.forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const fd = new FormData(form);
+      const name = String(fd.get("name") || "").trim();
+      const phone = String(fd.get("phone") || "").trim();
+      const service = String(fd.get("service") || "").trim();
+      const date = String(fd.get("date") || "").trim();
+      const comment = String(fd.get("comment") || "").trim();
+
+      if (!name || !phone) {
+        const firstInput = form.querySelector("input[name='name']") || form.querySelector("input[name='phone']");
+        if (firstInput) firstInput.focus();
+        return;
+      }
+
+      const subject = encode(`Заявка на сервис — ${service || "Автомастерская У попи"}`);
+      const body = encode(
+        [
+          "Новая заявка с сайта:",
+          `Имя: ${name}`,
+          `Телефон: ${phone}`,
+          `Услуга: ${service || "Не указана"}`,
+          `Желаемая дата: ${date || "Не указана"}`,
+          `Комментарий: ${comment || "Нет"}`
+        ].join("\n")
+      );
+      window.location.href = `mailto:jadeloomwear@gmail.com?subject=${subject}&body=${body}`;
+    });
+  });
+
   const turboBtn = document.getElementById("car-turbo-btn");
   const nightBtn = document.getElementById("car-night-btn");
   const carStage = document.getElementById("car-stage");
@@ -204,6 +237,47 @@
     });
   }
 
+  const carMascot = document.getElementById("car-mascot");
+  const carSong = document.getElementById("car-song");
+  const playCarSong = () => {
+    if (!carMascot || !carSong) return;
+    if (!carSong.getAttribute("src") && !carSong.querySelector("source")?.getAttribute("src")) {
+      return;
+    }
+
+    if (carSong.paused) {
+      carSong.currentTime = 0;
+      carSong.play().then(() => {
+        carMascot.classList.add("car-song-active");
+        if (carHint) carHint.textContent = "Сейчас играет: Rock You Like a Hurricane";
+      }).catch(() => {
+        if (carHint) carHint.textContent = "Добавьте файл rock-you-like-a-hurricane.mp3 в папку сайта";
+      });
+      return;
+    }
+
+    carSong.pause();
+    carMascot.classList.remove("car-song-active");
+    if (carHint) carHint.textContent = carStage?.classList.contains("night") ? "Ночная диагностика света" : "Демонстрация бокса";
+  };
+
+  if (carMascot) {
+    carMascot.addEventListener("click", playCarSong);
+    carMascot.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        playCarSong();
+      }
+    });
+  }
+
+  if (carSong) {
+    carSong.addEventListener("ended", () => {
+      if (carMascot) carMascot.classList.remove("car-song-active");
+      if (carHint) carHint.textContent = carStage?.classList.contains("night") ? "Ночная диагностика света" : "Демонстрация бокса";
+    });
+  }
+
   const showPhoneBtn = document.getElementById("show-phone");
   const phoneLink = document.getElementById("phone-link");
   if (showPhoneBtn && phoneLink) {
@@ -234,5 +308,9 @@
 
   window.addEventListener("beforeunload", () => {
     if (speedTimer) window.clearInterval(speedTimer);
+    if (carSong) {
+      carSong.pause();
+      carSong.currentTime = 0;
+    }
   });
 })();

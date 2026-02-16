@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Контакты | У попи</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Контакты и запись | У попи</title>
+  <meta name="description" content="Контакты автомастерской У попи: телефон, Telegram, почта, адрес и форма записи на сервис." />
+  <meta name="robots" content="index,follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="body-bg"></div>
@@ -25,7 +27,7 @@
   <main class="section" style="padding-top: 110px;">
     <div class="panel reveal in-view">
       <h2>Контакты и запись</h2>
-      <p>Записывайтесь на диагностику и ремонт удобным способом. Быстро отвечаем в рабочее время.</p>
+      <p>Записывайтесь на диагностику и ремонт удобным способом. В рабочее время отвечаем максимально быстро.</p>
 
       <div class="contact-methods">
         <a href="tel:+79940057901" class="btn btn-primary">Позвонить: +7 994 005 79 01</a>
@@ -33,15 +35,52 @@
         <a href="mailto:jadeloomwear@gmail.com" class="btn btn-ghost">Почта: jadeloomwear@gmail.com</a>
       </div>
 
+      <div class="map-actions">
+        <a class="btn btn-ghost" target="_blank" rel="noopener noreferrer" href="https://yandex.ru/maps/?text=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA%20%D0%9B%D1%83%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F%2074">Открыть в Яндекс Картах</a>
+        <a class="btn btn-ghost" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%B2%D0%BE%D1%81%D1%82%D0%BE%D0%BA+%D0%9B%D1%83%D0%B3%D0%BE%D0%B2%D0%B0%D1%8F+74">Открыть в Google Maps</a>
+      </div>
+
       <details class="contact-details" open>
-        <summary>Адрес мастерской</summary>
-        <p>г. Владивосток, ул. Луговая, д. 74</p>
+        <summary>Данные мастерской</summary>
+        <p>Адрес: г. Владивосток, ул. Луговая, д. 74</p>
         <p>Телефон: <a href="tel:+79940057901">+7 994 005 79 01</a></p>
         <p>Телеграм: <a href="https://t.me/Welika_00" target="_blank" rel="noopener noreferrer">@Welika_00</a></p>
         <p>Почта: <a href="mailto:jadeloomwear@gmail.com">jadeloomwear@gmail.com</a></p>
-        <p>Режим работы: Пн-Сб 09:00-19:00</p>
-        <p>Воскресенье: по предварительной записи</p>
+        <p>Режим работы: Пн-Сб 09:00-19:00, Вс — по предварительной записи.</p>
       </details>
+
+      <form class="booking-form" data-booking-form>
+        <h3 style="margin-top:0;">Онлайн-заявка</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label for="contact-name">Имя</label>
+            <input id="contact-name" name="name" type="text" required placeholder="Ваше имя" />
+          </div>
+          <div class="field">
+            <label for="contact-phone">Телефон</label>
+            <input id="contact-phone" name="phone" type="tel" required placeholder="+7 ..." />
+          </div>
+          <div class="field">
+            <label for="contact-service">Услуга</label>
+            <select id="contact-service" name="service">
+              <option>Диагностика</option>
+              <option>Ходовая / тормоза</option>
+              <option>Двигатель</option>
+              <option>ТО / масло</option>
+              <option>Электрика</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contact-date">Желаемая дата</label>
+            <input id="contact-date" name="date" type="date" />
+          </div>
+          <div class="field field-full">
+            <label for="contact-comment">Комментарий</label>
+            <textarea id="contact-comment" name="comment" placeholder="Марка, модель, симптомы неисправности"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Отправить заявку</button>
+      </form>
     </div>
   </main>
 

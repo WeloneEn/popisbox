@@ -3,11 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Услуги | Автомастерская У попи</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Услуги и цены | Автомастерская У попи</title>
+  <meta name="description" content="Услуги и цены автомастерской У попи: диагностика, ходовая, тормоза, двигатель, техобслуживание. Запись во Владивостоке." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Услуги и цены | Автомастерская У попи" />
+  <meta property="og:description" content="Честная смета, гарантия и прозрачный процесс ремонта." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="body-bg"></div>
@@ -26,7 +32,7 @@
   <main class="section" style="padding-top: 110px;">
     <div class="panel reveal in-view">
       <h2>Услуги и кейсы</h2>
-      <p>Формат работы построен как у современных международных сервисов: точная диагностика, согласование сметы и прозрачный отчет после ремонта.</p>
+      <p>Формат работы как у современных международных сервисов: входная диагностика, согласование сметы, ремонт и финальный контроль.</p>
 
       <div class="car-stage" id="car-stage">
         <div class="car-ui">
@@ -41,19 +47,28 @@
         <div class="lift-post right" aria-hidden="true"></div>
         <div class="road"></div>
 
-        <div class="car-mascot" aria-hidden="true">
+        <div class="car-mascot" id="car-mascot" role="button" tabindex="0" aria-label="Машина. Нажмите, чтобы включить песню Rock You Like a Hurricane.">
           <div class="car-shadow"></div>
           <div class="headlight-beam"></div>
           <div class="car-body">
+            <div class="car-hood-line"></div>
+            <div class="car-wheel-arch front"></div>
+            <div class="car-wheel-arch rear"></div>
             <div class="car-roof">
-              <div class="car-window"></div>
+              <div class="car-roof-antenna"></div>
+              <div class="car-window rear"></div>
+              <div class="car-pillar"></div>
+              <div class="car-window front"></div>
             </div>
             <div class="car-mirror"></div>
             <div class="car-door-line"></div>
+            <div class="car-hatch-line"></div>
+            <div class="car-handle"></div>
+            <div class="car-emblem"></div>
             <div class="car-grille"></div>
             <div class="car-light"></div>
             <div class="car-light rear"></div>
-            <div class="car-spoiler"></div>
+            <div class="car-bumper-lip"></div>
             <div class="car-underglow"></div>
           </div>
           <div class="exhaust">
@@ -73,29 +88,80 @@
           <div class="wheel right"></div>
         </div>
       </div>
+      <audio id="car-song" preload="none">
+        <source src="./rock-you-like-a-hurricane.mp3" type="audio/mpeg" />
+      </audio>
     </div>
 
     <div class="panel reveal" style="margin-top: 18px;">
+      <h2>Ориентиры по стоимости</h2>
+      <div class="price-grid">
+        <article class="price-card">
+          <h3>Компьютерная диагностика</h3>
+          <p>Считывание ошибок, первичный анализ, рекомендации.</p>
+          <div class="price-row"><span>Время</span><strong>30-60 мин</strong></div>
+          <div class="price-row"><span>Стоимость</span><strong>от 1 200 ₽</strong></div>
+        </article>
+        <article class="price-card">
+          <h3>Подвеска и ходовая</h3>
+          <p>Проверка люфтов, стоек, рычагов и рулевого.</p>
+          <div class="price-row"><span>Время</span><strong>1-3 ч</strong></div>
+          <div class="price-row"><span>Стоимость</span><strong>от 2 500 ₽</strong></div>
+        </article>
+        <article class="price-card">
+          <h3>Тормозная система</h3>
+          <p>Обслуживание суппортов, замена дисков/колодок.</p>
+          <div class="price-row"><span>Время</span><strong>1-2 ч</strong></div>
+          <div class="price-row"><span>Стоимость</span><strong>от 2 800 ₽</strong></div>
+        </article>
+        <article class="price-card">
+          <h3>ТО и масла</h3>
+          <p>Замена масла, фильтров, базовый контроль.</p>
+          <div class="price-row"><span>Время</span><strong>40-90 мин</strong></div>
+          <div class="price-row"><span>Стоимость</span><strong>от 1 900 ₽</strong></div>
+        </article>
+        <article class="price-card">
+          <h3>Ремонт двигателя</h3>
+          <p>Дефектовка, восстановление и сборка по регламенту.</p>
+          <div class="price-row"><span>Время</span><strong>по согласованию</strong></div>
+          <div class="price-row"><span>Стоимость</span><strong>от 8 000 ₽</strong></div>
+        </article>
+        <article class="price-card">
+          <h3>Электрика</h3>
+          <p>Поиск обрывов, проверка узлов, восстановление цепей.</p>
+          <div class="price-row"><span>Время</span><strong>1-4 ч</strong></div>
+          <div class="price-row"><span>Стоимость</span><strong>от 2 000 ₽</strong></div>
+        </article>
+      </div>
+      <p class="tiny">Итоговая стоимость зависит от модели автомобиля и состояния узлов. Точная смета — после диагностики.</p>
+      <div class="cta-band">
+        <p>Нужна быстрая оценка стоимости ремонта?</p>
+        <a class="btn btn-primary" href="contact.html">Оставить заявку</a>
+      </div>
+    </div>
+
+    <div class="panel reveal" style="margin-top: 18px;">
+      <h2>Кейсы</h2>
       <div class="grid">
         <article class="card work-item">
           <a href="project-1.html">
             <figure class="thumb"></figure>
             <h3>Точная диагностика</h3>
-            <p>Диагностируем электронику, ошибки ECU и скрытые механические проблемы.</p>
+            <p>Электроника, ошибки ECU и скрытые механические проблемы.</p>
           </a>
         </article>
         <article class="card work-item">
           <a href="project-2.html">
             <figure class="thumb"></figure>
             <h3>Ходовая и тормоза</h3>
-            <p>Проверка амортизаторов, рычагов, стоек, тормозной системы и рулевого.</p>
+            <p>Амортизаторы, рычаги, стойки, рулевое и тормоза.</p>
           </a>
         </article>
         <article class="card work-item">
           <a href="project-3.html">
             <figure class="thumb"></figure>
             <h3>Ремонт двигателя</h3>
-            <p>От замены прокладок до сложного восстановления и настройки мотора.</p>
+            <p>От замены прокладок до сложного восстановления мотора.</p>
           </a>
         </article>
       </div>

@@ -4,10 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>У попи | Автомастерская во Владивостоке</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Автомастерская У попи во Владивостоке: диагностика, ремонт двигателя, ходовой и тормозов. Адрес: ул. Луговая, 74. Запись по телефону +7 994 005 79 01." />
+  <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#f26921" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="У попи | Автомастерская во Владивостоке" />
+  <meta property="og:description" content="Профессиональный ремонт и честная диагностика легковых авто. Владивосток, ул. Луговая, 74." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Автомастерская У попи",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Владивосток",
+      "streetAddress": "ул. Луговая, 74",
+      "addressCountry": "RU"
+    },
+    "telephone": "+7 994 005 79 01",
+    "email": "jadeloomwear@gmail.com",
+    "url": "index.html",
+    "openingHours": "Mo-Sa 09:00-19:00"
+  }
+  </script>
 </head>
 <body>
   <div class="body-bg"></div>
@@ -27,30 +51,56 @@
       <div class="reveal in-view">
         <h1 class="title">Автосервис <span class="accent">«У попи»</span></h1>
         <p class="lead">
-          Профессиональный ремонт, честная диагностика и обслуживание любых легковых авто.
-          Работаем рядом с вами: г. Владивосток, ул. Луговая, д. 74.
+          Профессиональный ремонт, честная диагностика и обслуживание легковых авто.
+          Работаем во Владивостоке: ул. Луговая, д. 74.
         </p>
         <div class="hero-actions">
-          <a href="work.html" class="btn btn-primary">Смотреть услуги</a>
-          <a href="contact.html" class="btn btn-ghost">Записаться на сервис</a>
+          <a href="work.html" class="btn btn-primary">Смотреть услуги и цены</a>
+          <a href="contact.html" class="btn btn-ghost">Контакты и маршрут</a>
+        </div>
+        <div class="badge-list">
+          <span class="badge-chip">Гарантия до 6 месяцев</span>
+          <span class="badge-chip">Смета до начала работ</span>
+          <span class="badge-chip">Фотоотчет по ремонту</span>
+          <span class="badge-chip">Работаем с 09:00 до 19:00</span>
         </div>
       </div>
+
       <div class="hero-card reveal">
-        <h2>Почему выбирают нас</h2>
-        <div class="hero-stats">
-          <div class="stat">
-            <div class="stat-label">Опыт команды</div>
-            <div class="stat-value">12+ лет</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Средний срок ремонта</div>
-            <div class="stat-value">1-2 дня</div>
-          </div>
-          <div class="stat">
-            <div class="stat-label">Гарантия на работы</div>
-            <div class="stat-value">До 6 мес</div>
-          </div>
+        <h2>Быстрая запись</h2>
+        <div class="kpi-strip">
+          <div class="kpi-item"><strong>12+</strong><span>лет опыта команды</span></div>
+          <div class="kpi-item"><strong>1-2</strong><span>дня на типовой ремонт</span></div>
+          <div class="kpi-item"><strong>4.9</strong><span>средняя оценка сервиса</span></div>
+          <div class="kpi-item"><strong>100%</strong><span>согласование до ремонта</span></div>
         </div>
+        <form class="booking-form" data-booking-form>
+          <div class="form-grid">
+            <div class="field">
+              <label for="home-name">Ваше имя</label>
+              <input id="home-name" name="name" type="text" required placeholder="Например, Андрей" />
+            </div>
+            <div class="field">
+              <label for="home-phone">Телефон</label>
+              <input id="home-phone" name="phone" type="tel" required placeholder="+7 ..." />
+            </div>
+            <div class="field">
+              <label for="home-service">Услуга</label>
+              <select id="home-service" name="service">
+                <option>Диагностика</option>
+                <option>Ремонт ходовой</option>
+                <option>Ремонт двигателя</option>
+                <option>ТО и замена масел</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="home-date">Удобная дата</label>
+              <input id="home-date" name="date" type="date" />
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          <p class="form-note">После отправки откроется ваш почтовый клиент с заполненной заявкой.</p>
+        </form>
       </div>
     </main>
 
@@ -76,9 +126,16 @@
 
     <section class="section reveal">
       <div class="panel">
-        <h2>График работы</h2>
-        <p>Пн-Сб: 09:00-19:00, Вс: по предварительной записи.</p>
-        <p>Принимаем срочные заявки и коммерческий транспорт по согласованию.</p>
+        <h2>Режим работы и доступность</h2>
+        <div class="hours-grid">
+          <div class="hours-item"><strong>Понедельник-Суббота</strong><span>09:00-19:00</span></div>
+          <div class="hours-item"><strong>Воскресенье</strong><span>По записи</span></div>
+          <div class="hours-item"><strong>Срочные заявки</strong><span>В приоритете</span></div>
+        </div>
+        <div class="cta-band">
+          <p>Нужна консультация мастера прямо сейчас?</p>
+          <a class="btn btn-primary" href="tel:+79940057901">Позвонить: +7 994 005 79 01</a>
+        </div>
       </div>
     </section>
 
